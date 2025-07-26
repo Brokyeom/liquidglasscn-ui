@@ -1,0 +1,63 @@
+import { Meta } from '@storybook/addon-docs';
+
+<Meta title="Introduction" />
+
+# Liquid Glass Design System
+
+Apple의 디자인 철학에서 영감을 받은 Liquid Glass Design System은 투명도, 블러, 그리고 섬세한 빛의 반사를 활용하여 깊이감 있는 인터페이스를 만듭니다.
+
+## 핵심 원칙
+
+### 1. 투명도와 레이어링
+- 배경이 은은하게 비치는 반투명 요소
+- 계층적 깊이감을 통한 시각적 위계 표현
+- `backdrop-filter`를 활용한 실시간 블러 효과
+
+### 2. 부드러운 그림자
+- 다층 그림자로 자연스러운 부상감 표현
+- 내부 그림자로 유리질감 강조
+- 빛의 방향성을 고려한 섬세한 음영
+
+### 3. 유동적인 애니메이션
+- 부드러운 전환 효과
+- 호버와 클릭 시 미묘한 피드백
+- 자연스러운 이징 곡선
+
+## 디자인 토큰
+
+### 색상 시스템
+- **Primary**: 깊이감 있는 블루 계열
+- **Secondary**: 부드러운 중성 톤
+- **Accent**: 포인트를 위한 보라색 계열
+
+### Glass 효과 변수
+```css
+--glass-blur: 20px
+--glass-saturation: 1.8
+--glass-brightness: 1.1
+--glass-border: oklch(1 0 0 / 0.2)
+```
+
+## 사용 방법
+
+### 기본 Glass 컴포넌트
+```tsx
+<div className="glass glass-border rounded-xl p-6">
+  <h2>Glass Card</h2>
+  <p>투명한 유리질감의 카드입니다.</p>
+</div>
+```
+
+### 호버 효과 추가
+```tsx
+<button className="glass glass-hover glass-active rounded-lg px-4 py-2">
+  Glass Button
+</button>
+```
+
+### Glow 효과
+```tsx
+<div className="glass glass-glow rounded-xl p-6">
+  마우스를 올려보세요
+</div>
+```
